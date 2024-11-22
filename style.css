@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin: 20px 20px 20px 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: antiquewhite;
+    padding: 0 20px;
+}
+
+/* Logo va menyu */
+.header-logos {
+    display: flex;
+    align-items: center;
+}
+
+.header-logos a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: antiquewhite;
+}
+
+header a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+header a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4CAF50;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+.header-logos a span {
+    color: #ff4500;
+}
+
+/* SVG menyu tugmasi */
+.header-btn {
+    background: none;
+    border: none;
+}
+
+/* Linklar */
+.header-links {
+    display: flex;
+    gap: 20px;
+}
+
+.header-links a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+
+.header-links svg path {
+    fill: white;
+}
+
+.header-links a:hover svg path {
+    fill: #ff4500;
+}
+
+/* Asosiy qism */
+.contain {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 0 0 250px;
+    background-color: #272727;
+    padding: 15px;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.sidebar.active {
+    transform: translateX(-100%);
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.status {
+    margin: 10px 0;
+}
+
+.badge {
+    background-color: #313131;
+    padding: 3px 10px;
+    color: #e6e6e6;
+    border-radius: 12px;
+    margin-right: 5px;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info p a {
+    text-decoration: none;
+    color: #e6e6e6;
+}
+
+.contact-info p a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* Asosiy matn */
+.main-content {
+    flex: 1;
+    background-color: #272727;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.main-content h1 {
+    max-width: 800px;
+    margin-left: 90px;
+    margin-bottom: 14px;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main-content p {
+    max-width: 520px;
+    margin-left: 230px;
+    color: #838383;
+}
+
+.highlight {
+    color: #39965f;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #38955e;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFFB2;
+    margin-bottom: 15px;
+    max-width: 670px
+}
+
+.section p a span {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    color: #38955e;
+}
+
+.section p a {
+    text-decoration: none;
+}
+
+.contact-btn {
+    background-color: #4CAF50;
+    /* Yashil fon */
+    color: white;
+    /* Oq matn */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    /* Tugmani yumaloq qilish uchun */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Hover effekti uchun */
+}
+
+.contact-btn:hover {
+    background-color: #45a049;
+    /* Hover paytida fon rangi o'zgarishi */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 ustun */
+    gap: 20px;
+    align-items: start;
+}
+
+.about {
+    grid-column: span 1;
+    /* Bir ustun */
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-column: span 1;
+    /* Bir ustun */
+}
+
+.contact-btn {
+    margin-top: 20px;
+}
+
+.hr {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.html {
+    background: #1e1e1e;
+    width: 100px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icons img {
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.projects {
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter select {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tags span {
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.telegram-channel {
+    margin-top: 40px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.telegram-channel button {
+    background-color: #34a853;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.projects svg {
+    margin-bottom: 15px;
+}
+
+.contact-section {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-box {
+    background-color: #272727;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.contact-box img {
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin: 5px 0;
+}
+
+.contact-form {
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    background-color: #38955e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
